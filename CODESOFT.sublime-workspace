@@ -1,0 +1,513 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"con",
+				"condition_type"
+			],
+			[
+				"def",
+				"default"
+			],
+			[
+				"RT_Vart",
+				"RT_VarTable_get"
+			],
+			[
+				"exp",
+				"expr"
+			],
+			[
+				"lex_get",
+				"lex_get_tokcode"
+			],
+			[
+				"AST_E",
+				"AST_Expression_t"
+			],
+			[
+				"inc",
+				"inc\t#include \"…\""
+			],
+			[
+				"stdi",
+				"stdint.h>"
+			],
+			[
+				"sdl",
+				"stdlib.h"
+			],
+			[
+				"RT_Data",
+				"RT_Data_null"
+			],
+			[
+				"run",
+				"runtime.h\""
+			],
+			[
+				"RT_StackEntry_",
+				"RT_StackEntry_States_t"
+			],
+			[
+				"it",
+				"iterable"
+			],
+			[
+				"d",
+				"data.h\""
+			],
+			[
+				"STACKENTRY_",
+				"STACKENTRY_TYPE_SCOPE_POP"
+			],
+			[
+				"le",
+				"lexer.h\""
+			],
+			[
+				"LEX",
+				"LEXBASE_8"
+			],
+			[
+				"IN",
+				"INT_MAX"
+			],
+			[
+				"unord",
+				"unordered_set"
+			],
+			[
+				"ios",
+				"iostream>"
+			],
+			[
+				"RT_DataLi",
+				"RT_DataList_destroy"
+			],
+			[
+				"itr",
+				"iterable"
+			],
+			[
+				"RT_DATA",
+				"RT_DATA_TYPE_LST"
+			],
+			[
+				"R",
+				"RT_DATA_TYPE_BUL"
+			],
+			[
+				"i",
+				"iterable"
+			],
+			[
+				"for",
+				"for_block"
+			],
+			[
+				"by",
+				"by_i"
+			],
+			[
+				"end",
+				"end_i"
+			],
+			[
+				"start",
+				"start_i"
+			],
+			[
+				"str",
+				"string.h>"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"gp",
+				"Git: Push"
+			],
+			[
+				"gc",
+				"Git: Commit"
+			],
+			[
+				"ga",
+				"Git: Add All"
+			],
+			[
+				"git pll",
+				"Git: Pull"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git ad",
+				"Git: Add..."
+			],
+			[
+				"git st",
+				"Git: Status"
+			],
+			[
+				"fol",
+				"Code Folding: Fold All"
+			],
+			[
+				"termi",
+				"Terminus: Close All"
+			],
+			[
+				"th",
+				"UI: Select Theme"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"cop",
+				"File: Copy Path"
+			],
+			[
+				"ren",
+				"Rename File"
+			],
+			[
+				"fo",
+				"LSP: Format File"
+			],
+			[
+				"for",
+				"LSP: Format File"
+			],
+			[
+				"frm",
+				"Clang Format: Select Style"
+			],
+			[
+				"form",
+				"LSP: Format File"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"lsp",
+				"LSP: Toggle Log Panel"
+			],
+			[
+				"bui",
+				"Build With: Make"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"ter",
+				"Preferences: Terminus Settings"
+			],
+			[
+				"clang",
+				"Preferences: LSP-clangd Settings"
+			],
+			[
+				"term",
+				"Terminus: Close All"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"colo",
+				"UI: Select Color Scheme"
+			],
+			[
+				"the",
+				"UI: Select Theme"
+			],
+			[
+				"remove pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"side",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 376.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/aviruk/git/shsc-lang/src/parser.y",
+		"/C/Users/aviruk/git/shsc-lang/src/ast/nodes/create.c.h",
+		"/C/Users/aviruk/git/shsc-lang/src/runtime.c",
+		"/C/Users/aviruk/git/shsc-lang/shsc-lang.sublime-project",
+		"/C/Users/aviruk/AppData/Roaming/Sublime Text/Packages/User/LSP.sublime-settings",
+		"/C/Users/aviruk/AppData/Roaming/Sublime Text/Packages/LSP/LSP.sublime-settings",
+		"/C/Users/aviruk/git/shsc-lang/include/runtime.h",
+		"/C/Users/aviruk/git/shsc-lang/Makefile",
+		"/C/Users/aviruk/git/shsc-lang/include/lexer.h",
+		"/C/Users/aviruk/git/shsc-lang/docs/CONTRIBUTING.md",
+		"/C/Users/aviruk/git/shsc-lang/include/parser.yy.h",
+		"/C/Users/aviruk/git/shsc-lang/src/runtime/data/string.c.h",
+		"/C/Users/aviruk/git/shsc-lang/src/runtime/data/list.c.h",
+		"/C/Users/aviruk/git/shsc-lang/src/runtime/data.c.h",
+		"/C/Users/aviruk/git/shsc-lang/src/parser/parse_bool.c.h",
+		"/C/Users/aviruk/git/shsc-lang/src/parser/parse_chr.c.h",
+		"/C/Users/aviruk/git/shsc-lang/src/parser/parse_f64.c.h",
+		"/C/Users/aviruk/git/shsc-lang/src/parser/parse_i64.c.h",
+		"/C/Users/aviruk/git/shsc-lang/src/parser/parse_str.c.h",
+		"/C/Users/aviruk/git/shsc-lang/src/runtime/vartable.c.h",
+		"/C/Users/aviruk/git/shsc-lang/src/lexer/buffer.c.h",
+		"/C/Users/aviruk/git/shsc-lang/src/lexer/io.c.h",
+		"/C/Users/aviruk/git/shsc-lang/src/lexer/match_identifiers.c.h",
+		"/C/Users/aviruk/git/shsc-lang/src/lexer/match_literals.c.h",
+		"/C/Users/aviruk/git/shsc-lang/src/lexer/match_keywords.c.h",
+		"/C/Users/aviruk/git/shsc-lang/src/ast/nodes/destroy.c.h",
+		"/C/Users/aviruk/git/shsc-lang/src/ast/util/module_stack.c.h",
+		"/C/Users/aviruk/git/shsc-lang/src/ast/util/procedure_map.c.h",
+		"/C/Unix/llvm-mingw-64/include/stdlib.h",
+		"/C/Users/aviruk/git/shsc-lang/include/runtime/io.h",
+		"/C/Users/aviruk/git/shsc-lang/include/runtime/vartable.h",
+		"/C/Users/aviruk/git/shsc-lang/include/runtime/util/evalstack.h",
+		"/C/Users/aviruk/git/shsc-lang/include/ast/nodes/create.h",
+		"/C/Users/aviruk/git/shsc-lang/include/ast/util.h",
+		"/C/Users/aviruk/git/shsc-lang/include/ast/api.h",
+		"/C/Users/aviruk/git/shsc-lang/include/ast/nodes.h",
+		"/C/Users/aviruk/git/shsc-lang/compile_flags.txt",
+		"/C/Users/aviruk/git/shsc-lang/include/parser.h",
+		"/C/Users/aviruk/git/shsc-lang/include/runtime/data.h",
+		"/C/Users/aviruk/git/shsc-lang/include/runtime/data/list.h",
+		"/C/Users/aviruk/git/shsc-lang/include/runtime/data/string.h",
+		"/C/Users/aviruk/git/shsc-lang/include/ast.h",
+		"/C/Users/aviruk/git/shsc-lang/include/io.h",
+		"/C/Users/aviruk/codes/gfg-shortest-source-to-destination-path.cpp",
+		"/C/Users/aviruk/AppData/Roaming/Sublime Text/Packages/User/clang_format_custom.sublime-settings",
+		"/C/Users/aviruk/AppData/Roaming/Sublime Text/Packages/User/clang_format.sublime-settings",
+		"/C/Users/aviruk/AppData/Roaming/Sublime Text/Packages/Clang Format/clang_format_custom.sublime-settings",
+		"/C/Users/aviruk/AppData/Roaming/Sublime Text/Packages/Clang Format/clang_format.sublime-settings",
+		"/C/Users/aviruk/git/shsc-lang/compile_commands.json",
+		"/C/Users/aviruk/git/shsc-lang/src/lexer.c",
+		"/C/Users/aviruk/git/shsc-lang/.clangd",
+		"/C/Users/aviruk/git/shsc-lang/src/ast2json.c",
+		"/C/Users/aviruk/git/shsc-lang/tests/test.txt",
+		"/C/Users/aviruk/git/shsc-lang/tests/dump.txt",
+		"/C/Users/aviruk/git/shsc-lang/tests/tlib/stacktest.c",
+		"/C/Users/aviruk/git/shsc-lang/src/Makefile",
+		"/C/Users/aviruk/git/shsc-lang/src/main.c",
+		"/C/Users/aviruk/git/shsc-lang/include/ast2json.h",
+		"/C/Unix/llvm-mingw-64/include/stdio.h",
+		"/C/Users/aviruk/git/shsc-lang/include/errcodes.h",
+		"/C/Users/aviruk/git/shsc-lang/include/ast/nodes/enums.h",
+		"/C/Users/aviruk/git/shsc-lang/src/io.c",
+		"/C/Users/aviruk/AppData/Local/Sublime Text/Package Storage/LSP-clangd/clangd_16.0.2/lib/clang/16/include/stdarg.h",
+		"/C/Users/aviruk/AppData/Roaming/Sublime Text/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/C/Users/aviruk/AppData/Roaming/Sublime Text/Packages/User/Package Control.sublime-settings",
+		"/C/Users/aviruk/AppData/Roaming/Sublime Text/Packages/Package Control/Package Control.sublime-settings",
+		"/D/0/Linux/home/aviruk/Downloads/xhash.c"
+	],
+	"find":
+	{
+		"height": 27.2
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.2
+	},
+	"input":
+	{
+		"height": 44.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.LSP Log Panel":
+	{
+		"height": 488.0
+	},
+	"output.Terminus":
+	{
+		"height": 154.0
+	},
+	"output.diagnostics":
+	{
+		"height": 544.0
+	},
+	"output.exec":
+	{
+		"height": 126.400001526
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 126.400001526
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "CODESOFT.sublime-project",
+	"replace":
+	{
+		"height": 51.2
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 246.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
