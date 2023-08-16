@@ -121,8 +121,10 @@ int main()
             "   Enter " << DELETE       << " to DELETE entry\n"
             "   Enter " << END          << " to EXIT\n"
             "Enter your choice: ";
+
         /* taking input to an enum */
         choice_t choice = (choice_t) ({ int ch; std::cin >> ch; ch; });
+
         switch (choice) {
             case LOAD: {
                 std::cout << "\nWARNING:\n"
@@ -133,7 +135,9 @@ int main()
                  switch (ch) {
                     case 'y': case 'Y': {
                         std::cout << "Enter file path: ";
-                        std::string path; getline(std::cin, path); getline(std::cin, path);
+                        std::string path;
+                        std::cin.ignore();
+                        getline(std::cin, path);
                         todo.loadFromText(path);
                     }
                     default: break;
@@ -142,13 +146,15 @@ int main()
             }
             case SAVE: {
                 std::cout << "Enter file path: ";
-                std::string path; getline(std::cin, path); getline(std::cin, path);
+                std::cin.ignore();
+                std::string path; getline(std::cin, path);
                 todo.saveToText(path);
                 break;
             }
             case NEW: {
                 std::cout << "Enter todo details: ";
-                std::string info; getline(std::cin, info); getline(std::cin, info);
+                std::cin.ignore();
+                std::string info; getline(std::cin, info);
                 todo.addEntry(info);
                 break;
             }
