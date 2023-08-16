@@ -38,15 +38,24 @@ public:
         while (std::getline(inpf, line)) {
             ++line_no;
             size_t delimiterPos1 = line.find(",");
-            size_t delimiterPos2 = line.find(",", delimiterPos1+1);
-            if (delimiterPos1 == std::string::npos || delimiterPos2 == std::string::npos) {
-                std::cout << "Error reading line " << line_no << std::endl;
+            if (delimiterPos1 == std::string::npos) {
+                std::cout << "Error reading line " << line_no << " of file: " << path << std::endl;
                 exit(1);
             }
-            size_t id = std::stoul(line.substr(0, delimiterPos1));
-            bool status = (bool) std::stoul(line.substr(delimiterPos1+1, delimiterPos2));
-            std::string info = line.substr(delimiterPos2+1);
-            mp[id] = std::make_pair(info, status);
+            size_t delimiterPos2 = line.find(",", delimiterPos1 + 1);
+            if (delimiterPos2 == std::string::npos) {
+                std::cout << "Error reading line " << line_no << " of file: " << path << std::endl;
+                exit(1);
+            }
+            try {
+                size_t id = std::stoul(line.substr(0, delimiterPos1));
+                bool status = (bool) std::stoul(line.substr(delimiterPos1 + 1, delimiterPos2 - delimiterPos1 - 1));
+                std::string info = line.substr(delimiterPos2 + 1);
+                mp[id] = std::make_pair(info, status);
+            } catch (std::invalid_argument e) {
+                std::cout << "Error reading line " << line_no << " of file: " << path << std::endl;
+                exit(1);
+            }
         }
         inpf.close();
         std::cout << "\nLoaded " << mp.size() << " entries\n";

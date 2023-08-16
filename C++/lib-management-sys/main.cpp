@@ -68,7 +68,8 @@ public:
             outf << book->getISBN()   << "%"
                  << book->getAuthor() << "%"
                  << book->getTitle()  << "%"
-                 << (book->isBorrowed() ? "1" : "0") << std::endl;
+                 << (book->isBorrowed() ? "1" : "0") << "%"
+                 << book->getFineRate() << std::endl;
         }
         std::cout << "Written " << books.size() << " entries\n";
         outf.close();
@@ -87,21 +88,38 @@ public:
         while (std::getline(inpf, line)) {
             ++numBooks;
             size_t delimiterPos1 = line.find("%");
-            size_t delimiterPos2 = line.find("%", delimiterPos1 + 1);
-            size_t delimiterPos3 = line.find("%", delimiterPos2 + 1);
-            if (delimiterPos1 == std::string::npos || 
-                delimiterPos2 == std::string::npos || 
-                delimiterPos3 == std::string::npos) {
+            if (delimiterPos1 == std::string::npos) {
                 std::cout << "Error reading line " << numBooks << " of file: " << path << std::endl;
                 exit(1);
             }
-            std::string isbn = line.substr(0, delimiterPos1);
-            std::string author = line.substr(delimiterPos1 + 1, delimiterPos2 - delimiterPos1 - 1);
-            std::string title = line.substr(delimiterPos2 + 1, delimiterPos3 - delimiterPos2 - 1);
-            bool borrowed = (line.substr(delimiterPos3 + 1) == "1");
-            this->addBook(isbn, author, title);
-            if (borrowed)
-                this->borrowBook(isbn);
+            size_t delimiterPos2 = line.find("%", delimiterPos1 + 1);
+            if (delimiterPos2 == std::string::npos) {
+                std::cout << "Error reading line " << numBooks << " of file: " << path << std::endl;
+                exit(1);
+            }
+            size_t delimiterPos3 = line.find("%", delimiterPos2 + 1);
+            if (delimiterPos3 == std::string::npos) {
+                std::cout << "Error reading line " << numBooks << " of file: " << path << std::endl;
+                exit(1);
+            }
+            size_t delimiterPos4 = line.find("%", delimiterPos3 + 1);
+            if (delimiterPos4 == std::string::npos) {
+                std::cout << "Error reading line " << numBooks << " of file: " << path << std::endl;
+                exit(1);
+            }
+            try {
+                std::string isbn = line.substr(0, delimiterPos1);
+                std::string author = line.substr(delimiterPos1 + 1, delimiterPos2 - delimiterPos1 - 1);
+                std::string title = line.substr(delimiterPos2 + 1, delimiterPos3 - delimiterPos2 - 1);
+                bool borrowed = (line.substr(delimiterPos3 + 1, delimiterPos4 - delimiterPos3 - 1) == "1");
+                double fine = stod(line.substr(delimiterPos4 + 1));
+                this->addBook(isbn, author, title);
+                if (borrowed) this->borrowBook(isbn, false);
+                this->updateFineRate(isbn, fine);
+            } catch (std::invalid_argument e) {
+                std::cout << "Error reading line " << numBooks << " of file: " << path << std::endl;
+                exit(1);
+            }
         }
         inpf.close();
         std::cout << "Loaded " << numBooks << " entries\n";
@@ -119,7 +137,7 @@ public:
 
     void viewAllBooks() const
     {
-        printf("%11s | %16s | %20s | %s\n", "ISBN", "Author", "Title", "Status");
+        printf("\n%11s | %16s | %20s | %s\n", "ISBN", "Author", "Title", "Status");
         for (const auto& entry : books) {
             std::string isbn = entry.first;
             std::string author = entry.second->getAuthor();
@@ -164,13 +182,13 @@ public:
         books[isbn]->setFineRate(rate);
     }
 
-    void borrowBook(const std::string isbn)
+    void borrowBook(const std::string isbn, bool flag = true)
     {
         if (books.count(isbn) && !books[isbn]->isBorrowed()) {
             books[isbn]->setBorrowed(true);
-            std::cout << "Borrowed ISBN " << isbn << std::endl;
+            if (flag) std::cout << "Borrowed ISBN " << isbn << std::endl;
         }
-        else std::cout << "ISBN " << isbn << " is not in catalog\n";
+        else if (flag) std::cout << "ISBN " << isbn << " is not in catalog\n";
     }
 
     void returnBook(const std::string isbn)
@@ -203,10 +221,12 @@ public:
                 ++srch_cnt;
                 std::cout << "  ISBN:   " << pair.second->getISBN() << "\n"
                           << "  Author: " << pair.second->getAuthor() << "\n"
-                          << "  Title:  " << pair.second->getTitle() << "\n\n";
+                          << "  Title:  " << pair.second->getTitle() << "\n"
+                          << "  Fine:   " << pair.second->getFineRate() << " per day late\n"
+                          << "  Status: " << (!pair.second->isBorrowed() ? "Available" : "Borrowed") << "\n\n";
             }
         }
-        if (!srch_cnt) std::cout << "  Empty\n";
+        std::cout << "Found " << srch_cnt << " results\n";
     }
 
     double calcFine(const std::string &isbn, int lateDays)
