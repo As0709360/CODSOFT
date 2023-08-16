@@ -1,4 +1,4 @@
-# CodeSoft
+# CodSoft
 A list of tasks by CodSoft internship.
 
 ## C++
