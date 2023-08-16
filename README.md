@@ -1,5 +1,5 @@
 # CodeSoft
-A list of tasks by CodeSoft internship.
+A list of tasks by CodSoft internship.
 
 ## C++
 - [`number-guessing-game`](C%2B%2B/number-guessing-game/main.cpp)
