@@ -77,7 +77,7 @@ public:
         std::string line;
         int numBooks = 0;
         std::getline(inpf, line);
-        books.clear();
+        this->~Library();
         while (std::getline(inpf, line)) {
             ++numBooks;
             size_t delimiterPos1 = line.find("||,");
