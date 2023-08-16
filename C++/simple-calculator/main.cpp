@@ -28,7 +28,6 @@ int main()
             case END: exit(0);
             default:
                 std::cout << "Invalid input, try again\n";
-                exit(1);
         }
         std::cout << "Result = " << res << std::endl;
     }
