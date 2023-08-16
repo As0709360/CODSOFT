@@ -65,9 +65,9 @@ public:
         }
         for (const auto &pair : this->books) {
             const Book *book = pair.second;
-            outf << book->getISBN()   << "||,"
-                 << book->getAuthor() << "||,"
-                 << book->getTitle()  << "||,"
+            outf << book->getISBN()   << "%"
+                 << book->getAuthor() << "%"
+                 << book->getTitle()  << "%"
                  << (book->isBorrowed() ? "1" : "0") << std::endl;
         }
         std::cout << "Written " << books.size() << " entries\n";
@@ -83,13 +83,12 @@ public:
         }
         std::string line;
         int numBooks = 0;
-        std::getline(inpf, line);
         this->~Library();
         while (std::getline(inpf, line)) {
             ++numBooks;
-            size_t delimiterPos1 = line.find("||,");
-            size_t delimiterPos2 = line.find("||,", delimiterPos1 + 1);
-            size_t delimiterPos3 = line.find("||,", delimiterPos2 + 1);
+            size_t delimiterPos1 = line.find("%");
+            size_t delimiterPos2 = line.find("%", delimiterPos1 + 1);
+            size_t delimiterPos3 = line.find("%", delimiterPos2 + 1);
             if (delimiterPos1 == std::string::npos || 
                 delimiterPos2 == std::string::npos || 
                 delimiterPos3 == std::string::npos) {
@@ -353,6 +352,5 @@ int main()
                 std::cout << "\nInvalid input, try again\n";
         }
     }
-
     return 0;
 }
