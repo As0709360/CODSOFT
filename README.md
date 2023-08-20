@@ -2,6 +2,7 @@
 A list of tasks by CodSoft internship.
 
 ## C++
+- Demo at [`youtube`](https://youtube.com/playlist?list=PLEpLLkanU3k9zqLRBUpVtKGtsE9UEwHHB)
 - [`number-guessing-game`](C%2B%2B/number-guessing-game/main.cpp)
 - [`simple-calculator`](C%2B%2B/simple-calculator/main.cpp)
 - [`tic-tac-toe-game`](C%2B%2B/tic-tac-toe-game/main.cpp)
