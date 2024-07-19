@@ -1,0 +1,216 @@
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+
+class GuessNumber
+{
+private:
+    int secretNo;
+    int choice;
+public :
+                // for genrating number
+    void randGenrate()
+    {   
+        srand(time(0));
+        secretNo = 1 + (rand()% 100);
+    }
+
+
+void diff_mode01()
+{
+    system("cls");
+    cout <<"\n  Current Mode :- 'EASY' ";
+    cout << "\n\tYou have 10 attempts for Guessing the Correct number between 1 & 100.";
+    int turnleft = 10;
+    for(int i=1;i<=10;i++){
+        cout << "\n\n\tEnter the number: ";
+        cin>>choice;
+    if(choice==secretNo){
+        cout <<"\n\tWell Played! You Guessed , " << choice << " The Correct Number" << endl;
+        break;
+        }
+    else{
+        cout << "\n\tNo , " << choice << " is not the right number\n";
+        if(choice>secretNo){
+            cout <<"\n\t\tThe Correct number is smaller than - "<<choice<< endl;
+        }
+        else{
+            cout << "\n\t\t\tThe Correct number is greater than - "<<choice<< endl;
+        }
+        turnleft--;
+            cout <<"\n\t\t"<< turnleft << " attempts left ! " << endl;
+        if(turnleft==0){
+            cout<< "\n\t\tYou couldn't find the Correct Number ,";
+            cout<< "\n\t\tThe Correct  Number is "<<secretNo <<endl;
+            cout <<"\n\t\t------ You lose the Game !! ------\n\n";
+            }
+        }
+    }
+    char againchoice ;
+    cout <<"\n\t\t\tWould You Like To Play Again - (y/n)"<<endl;
+    cin >>againchoice;
+    if (againchoice == 'y')
+        {
+            diff_mode01();   
+        }
+    else
+        {
+            return ;
+        }
+}
+
+void diff_mode02(){
+        system("cls");
+        cout <<"\n  Current Mode :- 'MEDIUM' ";
+        cout << "\n\t\tYou have 7 attempts for Guessing the Correct Number between 1 & 100.";
+        int turnleft = 7;
+        for(int i=1;i<=7;i++){
+            cout << "\n\nEnter the number: ";
+            cin>>choice;
+        if(choice == secretNo){
+            cout <<"\n\t\tWell Played! You Guessed , " << choice << " The Correct Number "<<endl;
+            break;
+        }
+        else{
+            cout << "No , " << choice <<" is not the right number"<<endl;
+        if(choice>secretNo){
+            cout <<"The Correct number is Smaller Than - "<< choice<< endl;
+        }
+        else{
+            cout <<"The Correct number is Greater Than - "<< choice<< endl;
+        }
+        turnleft--;
+        cout <<"\n\t\t"<< turnleft << " attempts left !"<< endl;
+        if(turnleft==0){
+        cout << "\n\t\tYou Couldn't Find The Correct Number, it was "<< secretNo ;
+        cout <<"\n\t\t------ You lose the Game !! ------\n\n";
+            }
+        }
+      }
+      char againchoice ;
+    cout <<"\n\t\t\tWould You Like To Play Again - (y/n)"<<endl;
+    cin >>againchoice;
+    if (againchoice == 'y')
+        {
+            diff_mode02();   
+        }
+    else
+        {
+            return ;
+        }
+    }
+
+void diff_mode03(){
+    system("cls");
+    cout <<"\n  Current Mode :- 'DIFFICULT' ";
+    cout << "\n\t\tYou have 5 attempts For Guessing the Correct number between 1 and 100";
+    int turnleft=5;
+    for(int i=1;i<=5;i++){
+        cout << "\n\nEnter the number: ";
+        cin >> choice ;
+        if(choice == secretNo){
+            cout <<"Well Played! You Guessed , " << choice << " The Correct Number"<< endl ;
+            break;
+        }
+        else{
+            cout << "No , " << choice << " is not the right number\n";
+            if(choice > secretNo){
+                cout << "The Correct Number is Smaller Than - "<< choice << endl;
+            }
+        else{
+                cout << "The Correct Number is Greater Than - "<< choice << endl;
+            }
+            turnleft--;
+            cout <<"\n\t\t"<< turnleft << " attempts left ! " << endl;
+            if(turnleft == 0){
+                cout << "\n\tYou Couldn't find the Correct Number, it is "<< secretNo <<endl ; 
+                cout << "\n\t\t------You Lose the Game !------\n\n";
+            }
+         }
+      }
+      char againchoice ;
+    cout <<"\n\t\t\tWould You Like To Play Again - (y/n)"<<endl;
+    cin >>againchoice;
+    if (againchoice == 'y')
+        {
+            diff_mode03();   
+        }
+    else
+        {
+            return ;
+        }
+   }
+
+void index()
+{   
+    cout <<"\n\t\t________________________________________________";
+    cout <<"\n\t\t------ Welcome To Guess_The_Number Game !------";
+    cout <<"\n\t\t________________________________________________";
+}
+
+    void def()
+    {   
+        system("cls");
+        cout << "\n\t\t\t ---- ERROR ----"<<endl;
+        cout << "\n\t\t___________________________";
+        cout << "\n\tYou Pressed Incorrect key ! , Please Enter correct one "<< endl;
+    }
+
+    void Erase(){
+        system("cls");
+            cout << "\n\t\t-----Thanks For Playing The Game -----"<< endl;
+            exit(0);
+    }
+
+    void menu()
+    {
+        cout <<"\n\t\t\t---- Select Mode First ---- ";
+        cout << "\n\t\t____________________________________"<< endl;
+        cout <<"\n\t\t(1) : EASY " << endl;
+        cout <<"\n\t\t(2) : MEDIUM " << endl;
+        cout <<"\n\t\t(3) : DIFFICULT " << endl;
+        cout <<"\n\t\t(4) : QUIT "<<endl;
+        cout <<"\n\t Enter here ->";
+    }
+};
+
+
+int main()
+{
+GuessNumber object ;
+do
+{
+    object.index();
+    object.menu();
+    int choice;
+    cin>>choice;
+
+switch (choice)
+{
+    case 1:
+        object.randGenrate();
+        object.diff_mode01();
+        break;
+
+    case 2:
+        object.randGenrate();
+        object.diff_mode02();
+        break;
+
+    case 3:
+        object.randGenrate();
+        object.diff_mode03();
+        break;
+
+    case 4:
+        object.Erase();
+        break;
+
+    default:
+        object.def();
+        
+        }
+    } while (true);
+
+}
