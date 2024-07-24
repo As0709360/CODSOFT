@@ -1,0 +1,136 @@
+#include<iostream>
+using namespace std;
+
+class Calculator
+{
+public:
+    void add();
+    void sub();
+    void multi();
+    void dev();
+    void reminder();
+    
+};
+void Calculator::add(){
+    cout << "\n\t*Current Operation = (+)";
+    double num1 ,num2 ; 
+    cout << "Enter Numbers here -"<<endl;
+    cin >> num1 >> num2 ;
+
+    double sum = num1 + num2 ;
+    cout << num1 << " + "<< num2 << " = "<< sum <<endl;
+
+}
+
+void Calculator::sub(){
+    double num1 ,num2 ; 
+    cout << "Enter Numbers here -"<<endl;
+    cin >> num1 >> num2 ;
+
+    double sub = num1 - num2 ;
+    cout << num1 << " - "<< num2 << " = "<< sub <<endl;
+
+}
+
+void Calculator::multi(){
+    double num1 ,num2 ; 
+    cout << "Enter Numbers here -"<<endl;
+    cin >> num1 >> num2 ;
+
+    double multi = num1 * num2 ;
+    cout << num1 << " * "<< num2 << " = "<< multi <<endl;
+
+}
+
+void Calculator::dev(){
+    double num1 ,num2 ; 
+    cout << "Enter Numerbes here -"<<endl;
+    cin >> num1 >> num2 ;
+
+    double div = num1 / num2 ;
+    cout << num1 << " / "<< num2 << " = "<< div <<endl;
+
+}
+
+void Calculator::reminder(){
+
+    int num1 ,num2 ; 
+    cout << "Enter Numerbes here -"<<endl;
+    cin >> num1 >> num2 ;
+    int div = num1 % num2 ;
+
+    cout << num1 << " % "<< num2 << " = "<< div <<endl;
+
+}
+
+
+void display(){
+    cout << "\n\t\tWelcome To @codsoft-Calculator";
+    cout << "\n\t\t_________________________________"<< endl;
+
+}
+void quit(){
+    cout << "\n\t\t-----Thanks for Visit !-----"<< endl; 
+    cout << "\t\t______________________________";
+    exit(0);
+}
+int main(){
+    Calculator obj;
+    char choice ;
+    system("cls");
+    display();
+    do
+    {   
+        cout <<"\n\t\tSelect the operation ,you would like to perform " <<endl;
+        cout <<"\n\t\t   -----------------------------------";
+        cout <<"\n\t\t   |   Operation's Name   | Operator |";
+        cout <<"\n\t\t   -----------------------------------";
+        cout <<"\n\t\t   |->  Addition          |   (+)    |";
+        cout <<"\n\t\t   |->  Subtraction       |   (-)    |";
+        cout <<"\n\t\t   |->  Multiplication    |   (*)    |";
+        cout <<"\n\t\t   |->  Division          |   (/)    |";
+        cout <<"\n\t\t   |->  Reminder          |   (%)    |";
+        cout <<"\n\t\t   |->  Exit              |   (x)    |";
+        cout <<"\n\t\t   -----------------------------------";
+        cout <<"\n\t\tEnter sign here -> ";
+         cin >> choice ;
+
+        switch (choice)
+        {
+        case '+':
+            system("cls");
+            obj.add();
+            break;
+        
+        case '-':
+            system("cls");
+            obj.sub();
+            break;
+
+        case '*':
+            system("cls");
+            obj.multi();
+            break;
+
+        case '/':
+            system("cls");
+            obj.dev();
+            break;
+       
+        case '%':
+            system("cls");
+            obj.reminder();
+            break;
+
+        case 'x':
+            system("cls");
+            quit();
+
+        default:
+            system("cls");
+            cout << "\n\t\t ----- ERROR ! -----"<< endl; 
+            cout << "\n\t\tInvalid Input ! \n\t\tPlease select Correct Again" << endl ;
+            break;
+        }
+    } while (true);
+}
